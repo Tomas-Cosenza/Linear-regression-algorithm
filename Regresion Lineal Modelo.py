@@ -1,6 +1,6 @@
 
 # =============================================================================
-# Generación del conjunto de datos
+# GeneraciÃ³n del conjunto de datos
 # =============================================================================
 
 
@@ -69,7 +69,7 @@ lin_reg.intercept_
 # Parametro theta 1
 lin_reg.coef_
 
-# Prediccion para el valor mi­nimo y maximo del conjunto de datos de entrenamiento
+# Prediccion para el valor miÂ­nimo y maximo del conjunto de datos de entrenamiento
 X_min_max = np.array([[df["n_equipos_afectados"].min()], [df["n_equipos_afectados"].max()]])
 y_train_pred = lin_reg.predict(X_min_max)
 
@@ -86,10 +86,10 @@ plt.show()
 
 x_new = np.array([[1300]]) # 1300 equipos afectados
 
-# Prediccion del coste que tendrí­a el incidente
+# Prediccion del coste que tendrÃ­Â­a el incidente
 coste = lin_reg.predict(x_new)
 
-print("El coste del incidente serÃ­a:", int(coste[0]), "â‚¬")
+print("El coste del incidente sera:", int(coste[0]))
 
 plt.plot(df['n_equipos_afectados'], df['coste'], "b.")
 plt.plot(X_min_max, y_train_pred, "g-")
